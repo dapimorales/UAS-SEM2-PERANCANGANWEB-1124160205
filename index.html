@@ -9,6 +9,7 @@
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 min-h-screen py-8 transition-colors duration-300">
     <div class="container mx-auto max-w-4xl px-4">
         <div class="text-center mb-8 relative">
+            <!-- Header --> 
             <!-- Tombol Dark Mode -->
             <button 
                 id="darkModeToggle" 
@@ -23,7 +24,7 @@
                 </svg>
             </button>
 
-             <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center justify-between mb-8">
                 <!-- Kontainer Logo di sisi kiri -->
                 <div class="flex items-center space-x-4 flex-shrink-0">
                     <img
@@ -37,12 +38,85 @@
                         class="h-20 w-20 rounded-full shadow-lg object-cover"
                     >
                 </div>
-        <!-- Header --> 
-        <div class="flex-grow text-center">
-            <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">Global Institute</h1>
-            <p class="text-gray-600 dark:text-gray-300">NAMA: MAULANA KHADAFI</p>
-            <p class="text-gray-600 dark:text-gray-300">NIM: 1124160205</p>
-        </div>
+        
+                <div class="flex-grow text-center">
+                    <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">Global Institute</h1>
+                    <p class="text-gray-600 dark:text-gray-300">NAMA: MAULANA KHADAFI</p>
+                    <p class="text-gray-600 dark:text-gray-300">NIM: 1124160205</p>
+                </div>
+                <div class="w-[176px] h-0"></div> 
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border dark:border-gray-700">
+                <div class="flex items-center mb-6">
+                    <svg class="w-6 h-6 text-blue-600 dark:text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                    </svg>
+                    <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Form Pembayaran FOODG CAFE</h2>
+                </div>
+
+                <form id="paymentForm" class="space-y-4">
+                    <div>
+                        <label for="customerName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Nama Pelanggan
+                        </label>
+                        <input 
+                            type="text" 
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Masukkan nama pelanggan"
+                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="customerEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="customerEmail"
+                            name="customerEmail"
+                            placeholder="contoh@email.com"
+                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="productSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Pilih Produk/Layanan
+                        </label>
+                        <select 
+                            id="productSelect"
+                            name="product"
+                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                            required
+                        >
+                            <option value="">Pilih produk...</option>
+                            <option value="basic" data-price="20000">Kopi Gula Aren - Rp 20.000</option>
+                            <option value="premium" data-price="15000">Americano - Rp 15.000</option>
+                            <option value="professional" data-price="18000">Coffee Latte - Rp 18.000</option>
+                            <option value="enterprise" data-price="25000">Matcha Latte - Rp 25.000</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="quantity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Jumlah
+                        </label>
+                        <input 
+                            type="number" 
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            value="1"
+                            class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                            required
+                        >
+                    </div>
     </div>
 </body>
 </html>
