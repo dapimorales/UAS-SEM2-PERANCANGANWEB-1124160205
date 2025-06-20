@@ -141,6 +141,29 @@
                             </label>
                         </div>
                     </div>
+
+                    <div>
+                        <label for="promoCode" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Kode Promo (Opsional)
+                        </label>
+                        <div class="flex gap-2">
+                            <input 
+                                type="text" 
+                                id="promoCode"
+                                name="promoCode"
+                                placeholder="Masukkan kode promo"
+                                class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                            >
+                            <button 
+                                type="button" 
+                                id="applyPromoBtn"
+                                class="px-4 py-2 bg-green-500 dark:bg-green-600 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors duration-200"
+                            >
+                                Terapkan
+                            </button>
+                        </div>
+                        <div id="promoMessage" class="mt-2 text-sm hidden"></div>
+                    </div>
     </div>
 </body>
 </html>
